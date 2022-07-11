@@ -1,0 +1,252 @@
+@import url("https://fonts.googleapis.com/css?family=Titillium+Web:400,700&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Titillium Web", sans-serif;
+}
+
+.container{
+  display: block;
+  width: 100%;
+  height: 30rem;
+}
+.forms input{
+
+  border-radius: 5%;
+  border-color: #fff #fff crimson;
+}
+.forms button{
+  border-radius: 10%;
+  margin-top: 4%;
+  border-radius: 50px;
+  padding: 1% 5%;
+  font-size: 1rem;
+  align-self: center;
+  background-color: crimson;
+  color: #fff;
+}
+
+@keyframes slideleft {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+.page_des {
+  background: linear-gradient(#fff0 0%, #fff0 70%, #1d1d1d 100%),url(../components/img/TY5CVhp.jpg);
+  width: 100%;
+  padding-top: 12%;
+  /* height: 30em; */
+}
+
+.page_des .title {
+  width: 50%;
+  margin: auto;
+  /* margin-left: 20%; */
+  /* padding-right: 20%; */
+}
+
+.page_des h1 {
+  animation: slideleft 2s;
+  transition-duration: 2s;
+  font-family: 'Rancho', cursive;
+  font-size: 5em;
+  letter-spacing: 4px;
+  text-align: center;
+}
+
+.Description {
+  padding-top: 15%;
+  margin: auto;
+  /* padding-left: 4%; */
+  width: 80%;
+  padding-bottom: 5%;
+}
+
+
+.Description p {
+  animation: fadeIn 3s;
+  text-align: center;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+.subjects{
+  padding: 5%;
+  width: 100%;
+}
+
+.subjects .container {
+  /* position: absolute; */
+  height: 300px;
+  width: 600px;
+  top: 60px;
+  left: calc(50% - 300px);
+  display: flex;
+  margin: auto;
+}
+.subjects .card {
+  display: flex;
+  height: 280px;
+  width: 200px;
+  background-color: #17141d;
+  border-radius: 10px;
+  box-shadow: -1rem 0 3rem #000;
+/*   margin-left: -50px; */
+  transition: 0.4s ease-out;
+  position: relative;
+  left: 0px;
+}
+
+.subjects .card:not(:first-child) {
+  margin-left: -50px;
+}
+
+.subjects .card:hover {
+  transform: translateY(-20px);
+  transition: 0.4s ease-out;
+}
+.subjects .card:hover ~ .card {
+  position: relative;
+  left: 50px;
+  transition: 0.4s ease-out;
+}
+
+.subjects .title {
+  color: white;
+  font-weight: 300;
+  position: absolute;
+  left: 20px;
+  top: 15px;
+}
+
+.subjects .bar {
+  position: absolute;
+  top: 100px;
+  left: 20px;
+  height: 5px;
+  width: 150px;
+}
+
+.subjects .emptybar {
+  background-color: #2e3033;
+  width: 100%;
+  height: 100%;
+}
+
+.subjects .filledbar {
+  position: absolute;
+  top: 0px;
+  z-index: 3;
+  width: 0px;
+  height: 100%;
+  background: rgb(0,154,217);
+  background: linear-gradient(90deg, rgba(0,154,217,1) 0%, rgba(217,147,0,1) 65%, rgba(255,186,0,1) 100%);
+  transition: 0.6s ease-out;
+}
+
+.subjects .card:hover .filledbar {
+  width: 120px;
+  transition: 0.4s ease-out;
+}
+
+.subjects .circle {
+  position: absolute;
+  top: 150px;
+  left: calc(50% - 60px);
+}
+
+.subjects .stroke {
+  stroke: white;
+  stroke-dasharray: 360;
+  stroke-dashoffset: 360;
+  transition: 0.6s ease-out;
+}
+.subjects svg {
+  fill: #17141d;
+  stroke-width: 2px;
+}
+
+.subjects .card:hover .stroke {
+  stroke-dashoffset: 100;
+  transition: 0.6s ease-out;
+}
+
+.personal-card{
+  margin: auto;
+  padding: 5%;
+  text-align: center;
+}
+.personal-card ul li{
+  display: inline-block;
+  padding: 3%;
+  margin: auto;
+  text-align: center;
+}
+.personal-card .card-container {
+	background-color: #231E39;
+	border-radius: 5px;
+	box-shadow: 0px 10px 20px -10px rgba(0,0,0,0.75);
+	color: #B3B8CD;
+	padding-top: 30px;
+	/* position: relative; */
+	width: 350px;
+	max-width: 100%;
+	text-align: center;
+}
+.personal-card a{
+  text-decoration: none;
+}
+
+.personal-card .card-container .round {
+	border: 1px solid #03BFCB;
+	border-radius: 50%;
+	padding: 7px;
+}
+
+.personal-card button.primary {
+	background-color: #03BFCB;
+	border: 1px solid #03BFCB;
+	border-radius: 3px;
+	color: #231E39;
+	font-family: Montserrat, sans-serif;
+	font-weight: 500;
+	padding: 10px 25px;
+}
+
+.personal-card button.primary.ghost {
+	background-color: transparent;
+	color: #02899C;
+}
+
+.personal-card .skills {
+	background-color: #1F1A36;
+	text-align: left;
+	padding: 15px;
+	margin-top: 30px;
+}
+
+.personal-card .skills ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.personal-card .skills ul li {
+	border: 1px solid #2D2747;
+	border-radius: 2px;
+	display: inline-block;
+	font-size: 12px;
+	margin: 0 7px 7px 0;
+	padding: 7px;
+}

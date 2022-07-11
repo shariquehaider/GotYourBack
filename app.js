@@ -27,7 +27,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect("mongodb://localhost:27017/userDB", {useNewUrlParser: true});
+mongoose.connect("mongodb://localhost:27017/gotYourBackDB", {useNewUrlParser: true});
 mongoose.set("useCreateIndex", true);
 
 const userSchema = new mongoose.Schema ({
@@ -96,6 +96,7 @@ app.get("/secrets", function(req, res){
   User.find({"secret": {$ne: null}}, function(err, foundUsers){
     if (err){
       console.log(err);
+
     } else {
       if (foundUsers) {
         res.render("secrets", {usersWithSecrets: foundUsers});
@@ -104,10 +105,25 @@ app.get("/secrets", function(req, res){
   });
 });
 
+app.get("/upload", function(req, res){
+  if (req.isAuthenticated()){
+    res.render("upload");
+  } else {
+    res.redirect("/login");
+  }
+});
+
 app.get("/submit", function(req, res){
   if (req.isAuthenticated()){
     res.render("submit");
   } else {
+    res.redirect("/login");
+  }
+});
+app.get("/view", function(req, res){
+if(req.isAuthenticated()){
+  res.render("view");}
+  else{
     res.redirect("/login");
   }
 });

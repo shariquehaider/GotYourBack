@@ -1,0 +1,39 @@
+<%- include('partials/header') %>
+<%- include('partials/navbar') %>
+<header>
+  <a href="/">Got Your Back!</a>
+  <input type="checkbox" id="menu-bar">
+  <label for="menu-bar">Menu</label>
+  <nav class="navbar">
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/login">Login</a></li>
+      <li><a href="/upload">Your Uploads</a></li>
+    </ul>
+  </nav>
+</header>
+<div class="" style="display:flex;">
+  <div class="forms" style="width:400px;">
+    <form class="" action="/" method="post">
+      <label class="form-label" for="customFile">Upload your notes</label>
+      <input type="file" class="form-control" id="customFile" /><br>
+      <label class="form-label" for="customFile">Add some tag</label><br>
+      <input style="width:400px"type="text"style="font-size:0.6rem;" placeholder="  for eg: maths,os,dsa" name="tag" value="">
+      <br><br>
+      <label class="form-label" for="customFile">Add some details</label><br>
+      <input style="width:400px" type="text"style="font-size:1rem;" placeholder="" name="details" value=""><br><br>
+      <label class="form-label" for="customFile">Name of the Author</label>
+      <input style="width:400px" type="text"style="font-size:1rem;" placeholder="" name="details" value="">
+      <button type="submit" name="button">Submit</button>
+    </form>
+
+  </div>
+  <div style="text-align:center;"class="docs">
+    <h1>Your documents</h1>
+    <p style="color:transparent;">.......................................................................................................................</p>
+
+  </div>
+</div>
+
+
+<%- include('partials/footer') %>
